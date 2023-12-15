@@ -3,6 +3,7 @@ package com.tienda_W.Tienda.service;
 
 import com.tienda_W.Tienda.domain.Producto;
 import java.util.List;
+import org.springframework.data.jpa.repository.Query;
 
 /**
  *
@@ -21,4 +22,11 @@ public interface ProductoService {
     
     //Se elimina una producto segun el id pasado
     public void delete(Producto producto);
+    
+    public List<Producto> consultaQuery(double precioInf, double precioSup);
+    
+    
+    public List<Producto> consultaJPQL(double precioInf, double precioSup);
+    
+    public List<Producto> consultaSQL(double precioInf, double precioSup);
 }
